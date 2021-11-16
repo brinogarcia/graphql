@@ -1,0 +1,27 @@
+type Patient{
+    name: String,
+    birthDate: String,
+    maritalStatus: String,
+    profession: String,
+    address: String,
+    phone: Int,
+    email: String
+}
+
+input PatientInput{
+    name: String,
+    birthDate: String,
+    maritalStatus: String,
+    profession: String,
+    address: String,
+    phone: Int,
+    email: String
+}
+
+type Query{
+    findAllPatient: [Patient]
+}
+
+type Mutation{
+    savePatient(patient: PatientInput): Patient
+}
